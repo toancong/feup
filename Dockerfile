@@ -27,6 +27,10 @@ RUN mkdir -p /root/.ssh \
     && ssh-keyscan bitbucket.org >> /root/.ssh/known_hosts \
     && ssh-keyscan github.com >> /root/.ssh/known_hosts
 
+RUN adduser --disabled-password --gecos "" xroot \
+    && echo "xroot ALL=(ALL) NOPASSWD:ALL" >> /etc/sudoers \
+    && mkdir -p /data/www && chown xroot:xroot /data/www
+
 # The WORKDIR instruction sets the working directory for any RUN, CMD,
 # ENTRYPOINT, COPY and ADD instructions that follow it in the Dockerfile.
 WORKDIR /data/www
