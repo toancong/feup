@@ -39,7 +39,7 @@ WORKDIR /data/www
 # and adds them to the filesystem of the container at the path <dest>.
 # TL;DR https://www.ctl.io/developers/blog/post/dockerfile-add-vs-copy/
 # Use COPY
-COPY run.sh run.sh
+COPY files .
 
 WORKDIR /data/www/current
 
