@@ -13,7 +13,6 @@ RUN npm install --global \
     generator-angular \
     generator-karma \
     grunt-cli \
-    gulp \
     yo \
     && echo '{ "allow_root": true }' > /root/.bowerrc
 
