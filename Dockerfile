@@ -6,13 +6,17 @@ FROM node:4.4.6
 MAINTAINER Pham Cong Toan <toan.pham@monokera.com>
 
 RUN apt-get update && apt-get install -y \
-    git
+    git \
+    ruby-full
+
+RUN gem install sass
 
 RUN npm install --global \
     bower \
     generator-angular \
     generator-karma \
     grunt-cli \
+    gulp \
     yo \
     && echo '{ "allow_root": true }' > /root/.bowerrc
 
