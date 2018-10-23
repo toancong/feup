@@ -7,17 +7,10 @@ MAINTAINER Pham Cong Toan <toancong1920@gmail.com>
 
 RUN apt-get update && apt-get install -y \
     git \
-    ruby-full \
     && rm -rf /var/lib/apt/lists/*
 
-RUN gem install sass
-
 RUN yarn global add \
-    bower \
-    generator-angular \
-    generator-karma \
     grunt-cli \
-    gulp \
     http-server \
     yo \
     && echo '{ "allow_root": true }' > /root/.bowerrc
