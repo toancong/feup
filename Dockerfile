@@ -1,6 +1,6 @@
 # The FROM instruction sets the Base Image for subsequent instructions.
 # As such, a valid Dockerfile must have FROM as its first instruction.
-FROM node:8
+FROM node:12
 
 # The MAINTAINER instruction allows you to set the Author field of the generated images.
 MAINTAINER Pham Cong Toan <toancong1920@gmail.com>
@@ -10,9 +10,7 @@ RUN apt-get update && apt-get install -y \
     && rm -rf /var/lib/apt/lists/*
 
 RUN yarn global add \
-    grunt-cli \
     http-server \
-    yo \
     && echo '{ "allow_root": true }' > /root/.bowerrc
 
 # The RUN instruction will execute any commands in a new layer on top of the current image and commit the results.
