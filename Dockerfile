@@ -1,6 +1,6 @@
 # The FROM instruction sets the Base Image for subsequent instructions.
 # As such, a valid Dockerfile must have FROM as its first instruction.
-FROM node:12
+FROM node:16
 
 # The MAINTAINER instruction allows you to set the Author field of the generated images.
 MAINTAINER Pham Cong Toan <toancong1920@gmail.com>
